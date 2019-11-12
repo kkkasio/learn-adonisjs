@@ -27,3 +27,4 @@ Route.post('password', 'ForgotPasswordController.store');
 Route.put('password', 'ForgotPasswordController.update');
 
 Route.post('files', 'FileController.store');
+Route.get('files/:id', 'FileController.show');
