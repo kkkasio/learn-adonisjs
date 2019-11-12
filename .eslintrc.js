@@ -3,14 +3,28 @@ module.exports = {
     commonjs: true,
     es6: true
   },
-  extends: ['standard'],
+  extends: ['airbnb-base', 'prettier'],
   globals: {
     Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-    use: true
+    SharedArrayBuffer: 'readonly'
   },
+  plugins: ['prettier'],
   parserOptions: {
     ecmaVersion: 2018
   },
-  rules: {}
+  rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto'
+      }
+    ],
+    strict: 'off',
+    camelcase: 'off',
+    'no-undef': 0,
+
+    'consistent-return': 0,
+
+    'class-methods-use-this': 'off'
+  }
 };
