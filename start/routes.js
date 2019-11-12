@@ -20,7 +20,7 @@ Route.get('/', () => {
   return { version: '1.0.0' };
 });
 
-Route.post('users', 'UserController.store');
+Route.post('users', 'UserController.store').validator('User');
 Route.post('sessions', 'SessionController.store');
 
 Route.post('password', 'ForgotPasswordController.store');
