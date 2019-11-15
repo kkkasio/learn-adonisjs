@@ -5,7 +5,7 @@ const crypto = require('crypto');
 
 const User = use('App/Models/User');
 /** @type {typeof import('@adonisjs/mail/src/Mail')} */
-const Main = use('Mail');
+const Mail = use('Mail');
 
 class ForgotPasswordController {
   async store({ request, response }) {
@@ -18,7 +18,7 @@ class ForgotPasswordController {
 
       await user.save();
 
-      await Main.send(
+      await Mail.send(
         ['emails.forgot_password'],
         {
           email,
