@@ -22,9 +22,9 @@ module.exports = {
     strict: 'off',
     camelcase: 'off',
     'no-undef': 0,
-
     'consistent-return': 0,
-
-    'class-methods-use-this': 'off'
-  }
+    'class-methods-use-this': 'off',
+    'no-param-reassign': 0,
+    'no-multi-assign': "off"
+    }
 };
